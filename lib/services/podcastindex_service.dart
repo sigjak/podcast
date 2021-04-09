@@ -5,7 +5,7 @@ import 'dart:convert';
 import '../models/podcast_model.dart';
 
 class PodcastIndexService {
-  Future<void> fetchPodCastIndex() async {
+  Future<List<Feed>> fetchPodCastIndex() async {
     var unixTime = (DateTime.now().millisecondsSinceEpoch / 1000).round();
     String newUnixTime = unixTime.toString();
     // Change to your API key...
@@ -36,18 +36,9 @@ class PodcastIndexService {
     final response = await http.get(url, headers: headers);
 
     if (response.statusCode == 200) {
-      // If the server did return a 200 OK response,
-      // then parse the JSON.
-      final dec = jsonDecode(response.body);
-      print(dec['feeds'][0]['title']);
-      print(dec['feeds'].length);
-      final test = Podcasts.fromJson(dec);
-      print(test.feeds);
-
-      // return PodCastIndex.fromJson(json.decode(response.body));
+      Podcasts podcasts = podcastsFromJson(response.body);
+      return podcasts.feeds;
     } else {
-      // If the server did not return a 200 OK response,
-      // then throw an exception.
       throw Exception('Failed to load album');
     }
   }
