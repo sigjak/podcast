@@ -19,9 +19,7 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
     podcastIndexService.fetchPodCastIndex().then((feeds) {
       setState(() {
         _feeds = feeds;
-        print(_feeds[0].image);
-        print(_feeds[1].image);
-        print(_feeds[2].image);
+
         isLoading = false;
       });
     });
@@ -47,13 +45,17 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
                         child: Container(
                           height: 100,
                           child: Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
                             elevation: 5,
                             child: SingleChildScrollView(
                               child: ListTile(
-                                leading: CircleAvatar(
-                                  backgroundImage:
-                                      NetworkImage(_feeds[index].image),
+                                leading: ClipRRect(
+                                  borderRadius: BorderRadius.circular(4.0),
+                                  child: Image.network(
+                                    _feeds[index].image,
+                                    // width: 48,
+                                    // height: 48,
+                                    // fit: BoxFit.cover,
+                                  ),
                                 ),
                                 title: Text(_feeds[index].title),
                                 subtitle: Text(_feeds[index].description),
