@@ -19,7 +19,7 @@ class PodcastIndexService {
     var output = new AccumulatorSink<Digest>();
     var input = sha1.startChunkedConversion(output);
     var url = Uri.parse(
-        "https://api.podcastindex.org/api/1.0/search/byterm?q=fresh+air&pretty");
+        "https://api.podcastindex.org/api/1.0/search/byterm?q=this+american&pretty");
     input.add(firstChunk);
     input.add(secondChunk);
     input.add(thirdChunk);
