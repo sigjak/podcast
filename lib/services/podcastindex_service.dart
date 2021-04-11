@@ -5,7 +5,9 @@ import 'dart:convert';
 import '../models/podcast_model.dart';
 
 class PodcastIndexService {
-  Future<List<Feed>> fetchPodCastIndex() async {
+  Future<List<Feed>> fetchPodCastIndex(String searchTerm) async {
+    String baseUrl = "https://api.podcastindex.org/api/1.0/search/byterm?q=";
+    var url = Uri.parse(baseUrl + searchTerm);
     var unixTime = (DateTime.now().millisecondsSinceEpoch / 1000).round();
     String newUnixTime = unixTime.toString();
     // Change to your API key...
@@ -18,8 +20,8 @@ class PodcastIndexService {
 
     var output = new AccumulatorSink<Digest>();
     var input = sha1.startChunkedConversion(output);
-    var url = Uri.parse(
-        "https://api.podcastindex.org/api/1.0/search/byterm?q=this+american&pretty");
+    // var url = Uri.parse(
+    //     "https://api.podcastindex.org/api/1.0/search/byterm?q=this+american&pretty");
     input.add(firstChunk);
     input.add(secondChunk);
     input.add(thirdChunk);

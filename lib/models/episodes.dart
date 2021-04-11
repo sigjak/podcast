@@ -51,12 +51,6 @@ class Result {
     this.artworkUrl30,
     this.artworkUrl60,
     this.artworkUrl100,
-    this.collectionPrice,
-    this.trackPrice,
-    this.trackRentalPrice,
-    this.collectionHdPrice,
-    this.trackHdPrice,
-    this.trackHdRentalPrice,
     this.releaseDate,
     this.collectionExplicitness,
     this.trackExplicitness,
@@ -98,12 +92,6 @@ class Result {
   String artworkUrl30;
   String artworkUrl60;
   String artworkUrl100;
-  int collectionPrice;
-  int trackPrice;
-  int trackRentalPrice;
-  int collectionHdPrice;
-  int trackHdPrice;
-  int trackHdRentalPrice;
   DateTime releaseDate;
   String collectionExplicitness;
   String trackExplicitness;
@@ -161,19 +149,6 @@ class Result {
             json["artworkUrl60"] == null ? null : json["artworkUrl60"],
         artworkUrl100:
             json["artworkUrl100"] == null ? null : json["artworkUrl100"],
-        collectionPrice:
-            json["collectionPrice"] == null ? null : json["collectionPrice"],
-        trackPrice: json["trackPrice"] == null ? null : json["trackPrice"],
-        trackRentalPrice:
-            json["trackRentalPrice"] == null ? null : json["trackRentalPrice"],
-        collectionHdPrice: json["collectionHdPrice"] == null
-            ? null
-            : json["collectionHdPrice"],
-        trackHdPrice:
-            json["trackHdPrice"] == null ? null : json["trackHdPrice"],
-        trackHdRentalPrice: json["trackHdRentalPrice"] == null
-            ? null
-            : json["trackHdRentalPrice"],
         releaseDate: json["releaseDate"] == null
             ? null
             : DateTime.parse(json["releaseDate"]),
@@ -250,14 +225,6 @@ class Result {
         "artworkUrl30": artworkUrl30 == null ? null : artworkUrl30,
         "artworkUrl60": artworkUrl60 == null ? null : artworkUrl60,
         "artworkUrl100": artworkUrl100 == null ? null : artworkUrl100,
-        "collectionPrice": collectionPrice == null ? null : collectionPrice,
-        "trackPrice": trackPrice == null ? null : trackPrice,
-        "trackRentalPrice": trackRentalPrice == null ? null : trackRentalPrice,
-        "collectionHdPrice":
-            collectionHdPrice == null ? null : collectionHdPrice,
-        "trackHdPrice": trackHdPrice == null ? null : trackHdPrice,
-        "trackHdRentalPrice":
-            trackHdRentalPrice == null ? null : trackHdRentalPrice,
         "releaseDate":
             releaseDate == null ? null : releaseDate.toIso8601String(),
         "collectionExplicitness":
