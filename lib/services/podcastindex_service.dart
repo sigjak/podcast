@@ -38,8 +38,16 @@ class PodcastIndexService {
     final response = await http.get(url, headers: headers);
 
     if (response.statusCode == 200) {
+      List<Feed> cleanList = [];
       Podcasts podcasts = podcastsFromJson(response.body);
-      return podcasts.feeds;
+
+      podcasts.feeds.forEach((element) {
+        if (element.itunesId is int && element.itunesId > 0) {
+          cleanList.add(element);
+        }
+      });
+
+      return cleanList;
     } else {
       throw Exception('Failed to load album');
     }

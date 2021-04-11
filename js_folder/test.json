@@ -1,0 +1,122 @@
+{
+    "resultCount": 3,
+    "results": [
+        {
+            "wrapperType": "track",
+            "kind": "podcast",
+            "artistId": 125443881,
+            "collectionId": 214089682,
+            "trackId": 214089682,
+            "artistName": "NPR",
+            "collectionName": "Fresh Air",
+            "trackName": "Fresh Air",
+            "collectionCensoredName": "Fresh Air",
+            "trackCensoredName": "Fresh Air",
+            "artistViewUrl": "https://podcasts.apple.com/us/artist/npr/125443881?uo=4",
+            "collectionViewUrl": "https://podcasts.apple.com/us/podcast/fresh-air/id214089682?uo=4",
+            "feedUrl": "https://feeds.npr.org/381444908/podcast.xml",
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/fresh-air/id214089682?uo=4",
+            "artworkUrl30": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/30x30bb.jpg",
+            "artworkUrl60": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/60x60bb.jpg",
+            "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/100x100bb.jpg",
+            "collectionPrice": 0.00,
+            "trackPrice": 0.00,
+            "trackRentalPrice": 0,
+            "collectionHdPrice": 0,
+            "trackHdPrice": 0,
+            "trackHdRentalPrice": 0,
+            "releaseDate": "2021-04-10T04:01:00Z",
+            "collectionExplicitness": "notExplicit",
+            "trackExplicitness": "notExplicit",
+            "trackCount": 50,
+            "country": "USA",
+            "currency": "USD",
+            "primaryGenreName": "Books",
+            "artworkUrl600": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/600x600bb.jpg",
+            "genreIds": [
+                "1482",
+                "26",
+                "1301",
+                "1309"
+            ],
+            "genres": [
+                "Books",
+                "Podcasts",
+                "Arts",
+                "TV & Film"
+            ]
+        },
+        {
+            "artworkUrl600": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/600x600bb.jpg",
+            "episodeUrl": "https://play.podtrac.com/npr-381444908/edge1.pod.npr.org/anon.npr-mp3/npr/fa/2021/04/20210410_fa_fawpodcastedit_0410.mp3?awCollectionId=381444908&awEpisodeId=985366703&orgId=1&d=3026&p=381444908&story=985366703&t=podcast&e=985366703&size=48431944&ft=pod&f=381444908",
+            "artworkUrl160": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/160x160bb.jpg",
+            "episodeFileExtension": "mp3",
+            "episodeContentType": "audio",
+            "collectionViewUrl": "https://itunes.apple.com/us/podcast/fresh-air/id214089682?mt=2&uo=4",
+            "trackTimeMillis": 3026000,
+            "previewUrl": "https://play.podtrac.com/npr-381444908/edge1.pod.npr.org/anon.npr-mp3/npr/fa/2021/04/20210410_fa_fawpodcastedit_0410.mp3?awCollectionId=381444908&awEpisodeId=985366703&orgId=1&d=3026&p=381444908&story=985366703&t=podcast&e=985366703&size=48431944&ft=pod&f=381444908",
+            "artworkUrl60": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/60x60bb.jpg",
+            "artistViewUrl": "https://itunes.apple.com/us/artist/npr/125443881?mt=2&uo=4",
+            "contentAdvisoryRating": "Clean",
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/best-brandi-carlile-palestinian-cookbook-author-reem/id214089682?i=1000516522208&uo=4",
+            "trackId": 1000516522208,
+            "trackName": "Best Of: Brandi Carlile / Palestinian Cookbook Author Reem Kassis",
+            "releaseDate": "2021-04-10T04:01:22Z",
+            "shortDescription": "",
+            "feedUrl": "https://feeds.npr.org/381444908/podcast.xml",
+            "artistIds": [
+                125443881
+            ],
+            "closedCaptioning": "none",
+            "collectionId": 214089682,
+            "collectionName": "Fresh Air",
+            "country": "USA",
+            "kind": "podcast-episode",
+            "wrapperType": "podcastEpisode",
+            "genres": [
+                {
+                    "name": "Books",
+                    "id": "1482"
+                }
+            ],
+            "episodeGuid": "2d4e439a-1bbe-4c3a-b6f4-23fd8c5a6bed",
+            "description": "Six-time Grammy winner Brandi Carlile got her start onstage as a kid, singing backup for an Elvis impersonator. Her new memoir, 'Broken Horses,' is about her early life and the family of misfits she's built. \"I think I'm starting to really feel sort of solid and loved in my world. Like maybe I've kind of finally found my place,\" she says.\n\nMaureen Corrigan reviews Kaitlyn Greenidge's novel 'Libertie.' \n\nPalestinian cookbook author Reem Kassis began gathering family recipes after the birth of her first child. The recipes, she says, \"could be the story of any and every Palestinian family.\" Her new cookbook is 'The Arabesque Table.'"
+        },
+        {
+            "artworkUrl600": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/600x600bb.jpg",
+            "episodeUrl": "https://play.podtrac.com/npr-381444908/edge1.pod.npr.org/anon.npr-mp3/npr/fa/2021/04/20210409_fa_fapodfri.mp3?awCollectionId=381444908&awEpisodeId=985363178&orgId=1&d=2903&p=381444908&story=985363178&t=podcast&e=985363178&size=46451235&ft=pod&f=381444908",
+            "artworkUrl160": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/160x160bb.jpg",
+            "episodeFileExtension": "mp3",
+            "episodeContentType": "audio",
+            "collectionViewUrl": "https://itunes.apple.com/us/podcast/fresh-air/id214089682?mt=2&uo=4",
+            "trackTimeMillis": 2903000,
+            "previewUrl": "https://play.podtrac.com/npr-381444908/edge1.pod.npr.org/anon.npr-mp3/npr/fa/2021/04/20210409_fa_fapodfri.mp3?awCollectionId=381444908&awEpisodeId=985363178&orgId=1&d=2903&p=381444908&story=985363178&t=podcast&e=985363178&size=46451235&ft=pod&f=381444908",
+            "artworkUrl60": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/76/32/0c/76320cb7-7805-5ffc-6d48-18b311dd9be8/mza_18321298089187816075.jpg/60x60bb.jpg",
+            "artistViewUrl": "https://itunes.apple.com/us/artist/npr/125443881?mt=2&uo=4",
+            "contentAdvisoryRating": "Clean",
+            "trackViewUrl": "https://podcasts.apple.com/us/podcast/prolific-background-singer-merry-clayton/id214089682?i=1000516487149&uo=4",
+            "trackId": 1000516487149,
+            "trackName": "Prolific Background Singer Merry Clayton",
+            "releaseDate": "2021-04-09T20:30:19Z",
+            "shortDescription": "",
+            "feedUrl": "https://feeds.npr.org/381444908/podcast.xml",
+            "artistIds": [
+                125443881
+            ],
+            "closedCaptioning": "none",
+            "collectionId": 214089682,
+            "collectionName": "Fresh Air",
+            "country": "USA",
+            "kind": "podcast-episode",
+            "wrapperType": "podcastEpisode",
+            "genres": [
+                {
+                    "name": "Books",
+                    "id": "1482"
+                }
+            ],
+            "episodeGuid": "07899b87-7ee6-4f03-a15f-0feeac5a3d64",
+            "description": "Singer Merry Clayton did the iconic background vocals of the 1969 Rolling Stones song \"Gimme Shelter.\" But despite the fame and success of the record, Clayton remained largely anonymous. Until, that is, she was featured as one of the backup singers in the 2014 Oscar-winning documentary '20 Feet from Stardom.' Over the course of her career, Clayton sang with Ray Charles, Joe Cocker, Carole King and many others. Now she's got a new album — where she's front and center — called 'Beautiful Scars.' She spoke with Terry Gross in 2013. \n\nAlso, we'll hear some of our 2020 interview with filmmaker Craig Foster. His Netflix documentary 'My Octopus Teacher' is nominated for an Oscar."
+        }
+    ]
+}

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../services/podcastindex_service.dart';
 import '../models/podcast_model.dart';
+import '../models/episodes.dart';
 import '../services/episode_service.dart';
+import './episode_screen.dart';
 
 class PodcastIndexScreen extends StatefulWidget {
   @override
@@ -12,6 +14,7 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
   PodcastIndexService podcastIndexService = PodcastIndexService();
   EpisodeService episodeService = EpisodeService();
 
+  List<Result> headers = [];
   List<Feed> _feeds;
   bool isSearching = false;
   String searchTerm;
@@ -28,12 +31,14 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
   @override
   void initState() {
     super.initState();
-    podcastIndexService.fetchPodCastIndex('fresh+air').then((feeds) {
+    podcastIndexService.fetchPodCastIndex('this+american+life').then((feeds) {
       setState(() {
         _feeds = feeds;
       });
     });
   }
+
+  Future<void> prepareEpisodes() async {}
 
   @override
   void dispose() {
@@ -108,6 +113,13 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
                                   borderRadius: BorderRadius.circular(4.0),
                                   child: Image.network(
                                     _feeds[index].image,
+                                    errorBuilder: (BuildContext context,
+                                        Object exception,
+                                        StackTrace stackTrace) {
+                                      return Image(
+                                        image: AssetImage('assets/dd.png'),
+                                      );
+                                    },
                                   ),
                                 ),
                                 title: Text(_feeds[index].title),
@@ -117,9 +129,21 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
                                   onPressed: () async {
                                     int itunesId = _feeds[index].itunesId;
                                     print(itunesId.toString());
-                                    await episodeService
-                                        .getEpisodes('214089682');
-                                    // check if itues id is valid
+                                    if (itunesId != null) {
+                                      List<Result> episodeList =
+                                          await episodeService
+                                              .getEpisodes(itunesId.toString());
+                                      headers.add(episodeList[0]);
+                                      episodeList.removeAt(0);
+
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => EpisodeScreen(
+                                              headers, episodeList),
+                                        ),
+                                      );
+                                    }
                                   },
                                   icon: Icon(Icons.open_in_new),
                                 ),
