@@ -1,17 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../models/episodes.dart';
 
 class EpisodeScreen extends StatelessWidget {
   EpisodeScreen(this.headers, this.episodes);
-  final List<Result> headers;
+
+  final Result headers;
   final List<Result> episodes;
+  final newFormat = DateFormat("dd-MM-y");
+  final TextStyle defaultStyle = TextStyle(fontSize: 12, color: Colors.black);
+  func<String>(DateTime inp) {
+    return newFormat.format(inp);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Episodes'),
+        centerTitle: true,
+      ),
       body: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: Text(headers.collectionName, style: TextStyle(fontSize: 24)),
+          ),
           Expanded(
             child: ListView.builder(
                 itemCount: episodes.length < 10 ? episodes.length : 10,
@@ -23,9 +37,23 @@ class EpisodeScreen extends StatelessWidget {
                       elevation: 5,
                       child: SingleChildScrollView(
                         child: ListTile(
-                          title: Text(episodes[index].trackName),
+                          title: RichText(
+                            text: TextSpan(
+                                style: TextStyle(color: Colors.black),
+                                text: episodes[index].trackName,
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      style: TextStyle(fontSize: 10),
+                                      text:
+                                          ' ${func(episodes[index].releaseDate)}')
+                                ]),
+                          ),
                           subtitle: Text(episodes[index].description),
+                          trailing: IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.play_circle_filled)),
                           dense: true,
+                          isThreeLine: true,
                         ),
                       ),
                     ),

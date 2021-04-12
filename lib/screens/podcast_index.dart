@@ -14,7 +14,6 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
   PodcastIndexService podcastIndexService = PodcastIndexService();
   EpisodeService episodeService = EpisodeService();
 
-  List<Result> headers = [];
   List<Feed> _feeds;
   bool isSearching = false;
   String searchTerm;
@@ -128,13 +127,13 @@ class _PodcastIndexScreenState extends State<PodcastIndexScreen> {
                                 trailing: IconButton(
                                   onPressed: () async {
                                     int itunesId = _feeds[index].itunesId;
-                                    print(itunesId.toString());
+
                                     if (itunesId != null) {
                                       List<Result> episodeList =
                                           await episodeService
                                               .getEpisodes(itunesId.toString());
-                                      headers.add(episodeList[0]);
-                                      episodeList.removeAt(0);
+
+                                      var headers = episodeList.removeAt(0);
 
                                       Navigator.push(
                                         context,
