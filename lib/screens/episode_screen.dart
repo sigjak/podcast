@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../models/episodes.dart';
+import './audio_screen.dart';
 
 class EpisodeScreen extends StatelessWidget {
   EpisodeScreen(this.headers, this.episodes);
@@ -50,7 +51,19 @@ class EpisodeScreen extends StatelessWidget {
                           ),
                           subtitle: Text(episodes[index].description),
                           trailing: IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AudioScreen(
+                                        episodes[index].trackViewUrl,
+                                        episodes[index].artworkUrl600,
+                                        episodes[index].trackName,
+                                        episodes[index].collectionName,
+                                        episodes[index].description),
+                                  ),
+                                );
+                              },
                               icon: Icon(Icons.play_circle_filled)),
                           dense: true,
                           isThreeLine: true,
